@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run on port 8081",
+            "type": "shell",
+            "command": "docker run -it -p 8081:80 -e 'SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081' wallabag-test-server",
+        }
+    ]
+}
