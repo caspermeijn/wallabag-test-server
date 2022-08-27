@@ -1,5 +1,5 @@
 # Wallabag test server
-Easily a local test server with predefined user accounts. Useful for testing clients during development without the possibility of collateral damage. All changes are discarded when stopping the test server
+Easily start a local test server with predefined user accounts. Useful for testing clients during development without the possibility of collateral damage. All changes are discarded when stopping the test server
 
 ## Build
 ```bash
