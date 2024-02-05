@@ -22,5 +22,5 @@ docker run -it -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" w
 
 ## Start in write mode
 ```bash
-docker run -it -v $PWD/data:/var/www/wallabag/data -v $PWD/images:/var/www/wallabag/web/assets/images -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" wallabag/wallabag
+docker run -it -v $PWD/data:/var/www/wallabag/data -v $PWD/images:/var/www/wallabag/web/assets/images -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" wallabag-test-server
 ```
