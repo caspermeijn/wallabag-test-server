@@ -24,3 +24,14 @@ docker run -it -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" w
 ```bash
 docker run -it -v $PWD/data:/var/www/wallabag/data -v $PWD/images:/var/www/wallabag/web/assets/images -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" wallabag-test-server
 ```
+
+### Migrate to a new version
+
+- Edit version in `Dockerfile`
+- Build image (see above)
+- Make sure write permissions are set on the data directory: `chmod a+w -R data/`
+- Run migration script:
+```bash
+docker run -it -v $PWD/data:/var/www/wallabag/data -v $PWD/images:/var/www/wallabag/web/assets/images -p 8081:80 -e "SYMFONY__ENV__DOMAIN_NAME=http://localhost:8081" wallabag-test-server migrate
+```
+- Rebuild image (see above)
